@@ -1,0 +1,28 @@
+<idea-plugin>
+    <id>io.github.noeppi_noeppi.nodecg-io-intellij</id>
+    <name>nodecg-io for intellij</name>
+    <vendor email="invalid@invalid.invalid" url="https://github.com/noeppi-noeppi/nodecg-io-intellij">noeppi_noeppi</vendor>
+
+    <description>Perform things per HTTP-Request. Created to use with nodecg-io</description>
+    <change-notes>Nothing to see here. And as they want me to write at minimum 40 chars here im am wrting such a long text.</change-notes>
+
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.lang</depends>
+    <depends>com.intellij.modules.vcs</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+    </extensions>
+
+    <applicationListeners>
+        <listener class="io.github.noeppi_noeppi.nodecg_io_intellij.JavaLifecycleListener" topic="com.intellij.ide.AppLifecycleListener"/>
+    </applicationListeners>
+
+    <actions>
+        <!--suppress PluginXmlCapitalization -->
+        <action id="io.github.noeppi_noeppi.nodecg_io_intellij.JavaRestartAction"
+                class="io.github.noeppi_noeppi.nodecg_io_intellij.JavaRestartAction" text="Restart nodecg-io Server"
+                description="Restarts the nodecg-io Server.">
+            <add-to-group group-id="ToolsMenu" anchor="after" relative-to-action="ExternalToolsGroup"/>
+        </action>
+    </actions>
+</idea-plugin>
