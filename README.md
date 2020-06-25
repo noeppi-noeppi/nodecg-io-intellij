@@ -1,4 +1,4 @@
-**This project is WIP see [here]() for any updates)**
+**This project is WIP see [here](https://github.com/codeoverflow-org/nodecg-io/pull/29) for any updates)**
 
 # nodecg-io-intellij
 
