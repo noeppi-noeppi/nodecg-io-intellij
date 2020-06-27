@@ -17,6 +17,10 @@ dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }
 
+jar {
+    configurations.compile.each { dep -> from(project.zipTree(dep)) { exclude 'META-INF', 'META-INF/**' } }
+}
+
 // See https://github.com/JetBrains/gradle-intellij-plugin/
 intellij {
     type 'IC'
