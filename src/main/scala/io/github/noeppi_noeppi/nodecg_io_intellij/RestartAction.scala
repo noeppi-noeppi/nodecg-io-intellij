@@ -8,18 +8,18 @@ import com.intellij.openapi.ui.Messages
 class RestartAction extends AnAction {
 
   override def actionPerformed(event: AnActionEvent): Unit = {
+    val currentProject = event.getProject
     try {
       IntellijServer.stop()
       IntellijServer.start()
+      Messages.showMessageDialog(currentProject, "Server restarted.", "Success", Messages.getInformationIcon)
     } catch {
       case e: IOException =>
-        val currentProject = event.getProject
         Messages.showMessageDialog(currentProject, "Failed to restart the server: " + e.getMessage, "Failed", Messages.getWarningIcon)
     }
   }
 
   override def update(e: AnActionEvent): Unit = {
-    val project = e.getProject
     e.getPresentation.setEnabledAndVisible(true)
   }
 }

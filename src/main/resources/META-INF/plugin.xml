@@ -22,7 +22,7 @@
         <action id="io.github.noeppi_noeppi.nodecg_io_intellij.JavaRestartAction"
                 class="io.github.noeppi_noeppi.nodecg_io_intellij.JavaRestartAction" text="Restart nodecg-io Server"
                 description="Restarts the nodecg-io Server.">
-            <add-to-group group-id="ToolsMenu" anchor="after" relative-to-action="ExternalToolsGroup"/>
+            <add-to-group group-id="ToolsMenu" anchor="first"/>
         </action>
     </actions>
 </idea-plugin>

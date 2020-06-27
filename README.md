@@ -1,5 +1,3 @@
-**This project is WIP see [here](https://github.com/codeoverflow-org/nodecg-io/pull/29) for any updates)**
-
 # nodecg-io-intellij
 
 `nodecg-io-intellij` is an IntelliJ-Plugin that hosts an HTTP-Server to allow manipulation of the IDE via HTTP-Requests. This was developed for the [nodecg-io](https://github.com/codeoverflow-org/nodecg-io) project. You may take a look at it if you need examples on how to use this.
