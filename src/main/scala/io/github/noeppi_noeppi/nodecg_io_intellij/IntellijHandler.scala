@@ -1,6 +1,7 @@
 package io.github.noeppi_noeppi.nodecg_io_intellij
 
 import java.io._
+import java.lang.management.ManagementFactory
 import java.util.Base64
 
 import com.google.gson._
@@ -28,6 +29,7 @@ object IntellijHandler extends HttpHandler {
 
   lazy val handlers: Map[String, Handle] = Map(
     "available_methods" -> availableMethods,
+    "get_pid" -> getPid,
     "get_project" -> getProject,
     "get_open_editor_file" -> getOpenEditorFile,
     "is_project_valid" -> isProjectValid,
@@ -227,6 +229,12 @@ object IntellijHandler extends HttpHandler {
       for (handler <- handlers.keys)
         data.add(handler)
       new Response(true, "ok", data)
+    }
+  }
+
+  object getPid extends Handle {
+    override def handle(data: JsonObject): Response = {
+      new Response(true, "ok", ManagementFactory.getRuntimeMXBean.getPid)
     }
   }
 

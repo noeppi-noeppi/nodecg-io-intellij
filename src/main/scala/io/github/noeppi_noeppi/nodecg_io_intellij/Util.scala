@@ -2,7 +2,7 @@ package io.github.noeppi_noeppi.nodecg_io_intellij
 
 import java.awt.Component
 import java.awt.event.{InputEvent, KeyEvent}
-import java.lang.reflect.{Constructor, Method}
+import java.lang.reflect.Method
 import java.math.{BigDecimal, BigInteger}
 
 import com.google.gson._
@@ -12,8 +12,8 @@ import com.intellij.history.core.tree.RootEntry
 import com.intellij.history.core.{LabelImpl, LocalHistoryFacade}
 import com.intellij.history.integration.LocalHistoryImpl
 import com.intellij.history.{ByteContent, LocalHistory}
-import com.intellij.openapi.actionSystem.ex.{ActionManagerEx, ActionUtil}
 import com.intellij.openapi.actionSystem._
+import com.intellij.openapi.actionSystem.ex.{ActionManagerEx, ActionUtil}
 import com.intellij.openapi.application.ApplicationManager
 import com.intellij.openapi.fileEditor.FileEditorManager
 import com.intellij.openapi.project.{Project, ProjectManager}
