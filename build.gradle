@@ -24,7 +24,7 @@ jar {
 // See https://github.com/JetBrains/gradle-intellij-plugin/
 intellij {
     type 'IC'
-    version '2020.1.1'
+    version '2020.2.1'
 
     plugins = [
 
